@@ -1,0 +1,130 @@
+\documentclass[letterpaper, 12pt]{yalephd}
+%\usepackage[letterpaper,margin=1.0in,left=1.5in]{geometry}
+
+% for double table of contents: https://tex.stackexchange.com/questions/260445/separate-table-of-contents-for-appendix
+\usepackage{geometry} % you need this for yalephd.cls to work.
+\usepackage{graphicx} % you probably want the rest of these.
+
+\usepackage{etoc}
+
+% packages used
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+%\usepackage[format=plain,font=small,labelfont=bf,textfont=up]{caption}
+
+\usepackage{natbib}
+\usepackage{setspace}
+\setstretch{1.05}
+
+\usepackage{amsmath}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{romannum}
+\usepackage{mathtools}
+\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{dcolumn}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{lscape}
+\usepackage{commath}
+
+\usepackage{blindtext} % used only for generating fake text
+
+\usepackage[hidelinks]{hyperref} % this should go last apparently?
+
+\usepackage{flushend}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{tikz}
+\usetikzlibrary{bayesnet}
+%\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+%\usepackage{stfloats}
+\usepackage{longtable}
+
+\doublespacing
+
+\begin{document}
+	
+%%%%%%%%%%%%%%%%%
+% Preamble to Dissertation
+%%%%%%%%%%%%%%%%%
+	
+\title{DISSERTATION TITLE}
+\author{NAME}
+\advisor{Brian Scassellati}
+\date{MONTH YEAR}
+
+% All the stuff at the front of your thesis.
+\frontmatter
+
+\input{content/abstract}
+
+\maketitle
+\makecopyright{2022} % change as needed.
+
+
+\setcounter{page}{3}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+\input{content/acknowledgment}
+
+\newpage
+
+\mainmatter
+
+%\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%
+% Main Body of Dissertation
+%%%%%%%%%%%%%%%%%
+
+\input{content/chapter-1}
+
+\input{content/chapter-2}
+
+\input{content/chapter-3}
+
+\input{content/chapter-4}
+
+%%%%%%%%%%%%%%%%%
+% Bibliography
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+% Appendices
+%%%%%%%%%%%%%%%%%
+
+\newpage
+\appendix
+
+\input{content/appendix}
+
+\backmatter
+
+\bibliographystyle{apalike}
+% \bibliographystyle{abbrv}
+% \bibliographystyle{abbrvunsrt} %this is what was here
+\bibliography{reference}
+
+%\begin{singlespace}
+%	\bibliography{reference.bib}
+%\end{singlespace}
+
+
+\end{document}
