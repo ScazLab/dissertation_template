@@ -213,8 +213,8 @@ class, modified by AG]
   \begin{titlepage}%
     \pagestyle{empty}%
     \begin{center}
-      {\bf Abstract}\par\bigskip
-      {\Large \bf \@title}\par\bigskip
+      { Abstract}\par\bigskip
+      { \@title}\par\bigskip
       \@author \\
       \the\year
       \end{center}%
@@ -235,10 +235,10 @@ class, modified by AG]
 \renewcommand\maketitle{\begin{titlepage}%
   \null \vskip 40\p@
   \begin{center}%
-    {\LARGE\bf \@title \par}%
+    { \@title \par}%
     \vfil
     \begin{singlespace}
-    {\large
+    {
                A Dissertation\\
       Presented to the Faculty of the Graduate School\\
                  of\\
@@ -249,7 +249,7 @@ class, modified by AG]
               \@author\par\vskip 1.5em%
          Dissertation Director: \@advisorline\par
     }\vskip 1.5em%
-    {\large \@date \par
+    { \@date \par
     \ifdraft Draft of \today\par\fi
     }%
   \end{singlespace}
@@ -272,10 +272,12 @@ class, modified by AG]
 %--------------------------------------------------------------------
 
 \newcommand{\makecopyright}[1]{%
-  \hbox{\hfil}\vspace{4in}\begin{center}
+  \newgeometry{top=3in}
+  \begin{center}
   Copyright \copyright\ #1 by \@author \\
   All rights reserved.
   \end{center}
+  \restoregeometry
   \clearpage
 }%
 
